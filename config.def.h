@@ -5,7 +5,12 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-static char *font = "Liberation Mono:pixelsize=12:antialias=true:autohint=true";
+static char *font = "Iosevka Nerd Font:pixelsize=13:antialias=true:autohint=true";
+/* Spare fonts */
+static char *font2[] = {
+    "VictorMono Nerd Font:pixelsize=13:antialias=true:autohint=true:italic",
+    "VictorMono Nerd Font:pixelsize=13:antialias=true:autohint=true:bold",
+};
 static int borderpx = 2;
 
 /*

@@ -8,8 +8,8 @@
 static char *font = "Iosevka Nerd Font:pixelsize=13:antialias=true:autohint=true";
 /* Spare fonts */
 static char *font2[] = {
-    "VictorMono Nerd Font:pixelsize=13:antialias=true:autohint=true:italic",
-    "VictorMono Nerd Font:pixelsize=13:antialias=true:autohint=true:bold",
+    "VictorMono:pixelsize=13:antialias=true:autohint=true:italic",
+    "Iosevka Nerd Font:pixelsize=13:antialias=true:autohint=true:bold",
 };
 static int borderpx = 2;
 
@@ -71,6 +71,17 @@ static unsigned int blinktimeout = 800;
  * thickness of underline and bar cursors
  */
 static unsigned int cursorthickness = 2;
+/*
+ * 1: render most of the lines/blocks characters without using the font for
+ *    perfect alignment between cells (U2500 - U259F except dashes/diagonals).
+ *    Bold affects lines thickness if boxdraw_bold is not 0. Italic is ignored.
+ * 0: disable (render all U25XX glyphs normally from the font).
+ */
+const int boxdraw = 0;
+const int boxdraw_bold = 0;
+
+/* braille (U28XX):  1: render as adjacent "pixels",  0: use font */
+const int boxdraw_braille = 0;
 
 /*
  * bell volume. It must be a value between -100 and 100. Use 0 for disabling
